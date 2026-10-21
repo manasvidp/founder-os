@@ -1,0 +1,140 @@
+{
+  "project_name": "Founder OS",
+  "app_type": "Executive Command Centre Dashboard (SaaS)",
+  "design_archetype": "Swiss & High-Contrast Modular Command (Ref: Dribbble CRM Dashboard)",
+  "font_system": {
+    "google_fonts_import": "https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap",
+    "font_headings": "'Plus Jakarta Sans', -apple-system, sans-serif",
+    "font_body": "'Plus Jakarta Sans', -apple-system, sans-serif",
+    "font_mono": "'JetBrains Mono', monospace",
+    "rules": "Use tight tracking (tracking-tight) on headings >= 20px. Use font-mono for financial metrics, KPI values, streak counts, and timestamp badges."
+  },
+  "color_palette": {
+    "light_mode_hsl": {
+      "background": "40 16% 97%",
+      "foreground": "220 20% 10%",
+      "card": "0 0% 100%",
+      "card_foreground": "220 20% 10%",
+      "popover": "0 0% 100%",
+      "popover_foreground": "220 20% 10%",
+      "primary": "220 26% 14%",
+      "primary_foreground": "0 0% 98%",
+      "secondary": "40 10% 94%",
+      "secondary_foreground": "220 20% 14%",
+      "muted": "40 8% 93%",
+      "muted_foreground": "220 10% 46%",
+      "accent": "224 64% 54%",
+      "accent_foreground": "0 0% 98%",
+      "destructive": "347 77% 50%",
+      "destructive_foreground": "0 0% 98%",
+      "border": "35 12% 88%",
+      "input": "35 12% 88%",
+      "ring": "224 64% 54%"
+    },
+    "dark_mode_hsl": {
+      "background": "220 18% 10%",
+      "foreground": "210 20% 98%",
+      "card": "220 16% 13%",
+      "card_foreground": "210 20% 98%",
+      "popover": "220 16% 13%",
+      "popover_foreground": "210 20% 98%",
+      "primary": "210 20% 98%",
+      "primary_foreground": "220 26% 10%",
+      "secondary": "220 14% 18%",
+      "secondary_foreground": "210 20% 98%",
+      "muted": "220 14% 18%",
+      "muted_foreground": "218 11% 60%",
+      "accent": "224 64% 54%",
+      "accent_foreground": "0 0% 98%",
+      "destructive": "347 77% 50%",
+      "destructive_foreground": "0 0% 98%",
+      "border": "220 14% 20%",
+      "input": "220 14% 20%",
+      "ring": "224 64% 54%"
+    },
+    "semantic_accents": {
+      "growth_emerald": "158 64% 42%",
+      "warning_amber": "38 92% 50%",
+      "risk_rose": "347 77% 50%",
+      "ai_purple": "262 83% 58%",
+      "ochre_bronze": "32 50% 48%",
+      "info_sky": "199 89% 48%"
+    }
+  },
+  "layout_architecture": {
+    "sidebar": {
+      "expanded_width": "256px",
+      "collapsed_width": "68px",
+      "style": "Clean persistent background, subtle 1px border, expandable section groups",
+      "nav_items": [
+        "Home (Command Centre)",
+        "Strategy & Goals (Horizons)",
+        "Tasks (Kanban & Inbox)",
+        "Projects",
+        "Calendar",
+        "Business",
+        "Personal",
+        "People CRM (Pipeline & Contacts)",
+        "Content Studio (Coming Soon)",
+        "Knowledge (Coming Soon)",
+        "Finance (Runway & Transactions)",
+        "AI Chief of Staff",
+        "Reviews & Achievements",
+        "Settings"
+      ]
+    },
+    "topbar": {
+      "height": "60px",
+      "components": [
+        "Global Search (Cmd+K Command Menu trigger)",
+        "Perspective Selector Switcher (Business / Personal / Combined)",
+        "Quick Capture Button (+ Task/Note/Contact)",
+        "Execution Score Indicator Mini-badge",
+        "Notifications Popover",
+        "Founder Profile Drawer"
+      ]
+    },
+    "main_dashboard": {
+      "grid_mode": "Bento Grid System (grid-cols-1 md:grid-cols-8 lg:grid-cols-12 gap-5)",
+      "widgets": [
+        "Daily Briefing Banner + AI Next Action (col-span-full md:col-span-8)",
+        "Daily Execution Score Progress Ring & Streaks (col-span-full md:col-span-4)",
+        "Top 3 Priorities Checklist (col-span-full md:col-span-4)",
+        "Finance Snapshot (Runway & Cashflow Sparklines) (col-span-full md:col-span-4)",
+        "Today's Agenda & Time-blocks (col-span-full md:col-span-4)",
+        "CRM Follow-ups & Pipeline Alerts (col-span-full md:col-span-6)",
+        "Habit & Wellbeing Tracker (col-span-full md:col-span-6)"
+      ]
+    }
+  },
+  "component_styling_rules": {
+    "cards": "Subtle border (border-border), rounded-xl, quiet shadow-sm, crisp bg-card, p-5 to p-6 padding",
+    "kanban": "Drag-and-drop / click-to-move columns with stage counts, deal values, lead tags, and quick-edit slide-over drawer",
+    "progress_ring": "SVG circle with animated stroke-dashoffset, inner percentage + score level label",
+    "command_menu": "Cmd+K modal overlay with instant filter for actions, navigation, CRM records, and tasks",
+    "contact_drawer": "Slide-over sheet (right side, 440px width) containing contact details, interactions log, notes, and follow-up scheduler"
+  },
+  "gamification_system": {
+    "type": "Executive & Mature Gamification",
+    "features": [
+      "Daily Execution Score (0 - 100% composite of top priorities, habits, shutdown)",
+      "Streaks with 1-day graceful freeze protection",
+      "Leveling System (e.g., Level 12 Scale Architect) based on actual activity",
+      "Daily Shutdown Ritual (End-of-day reflect, clear inbox, set tomorrow's top 3)",
+      "Satisfying Micro-completion confetti & haptic checkmarks"
+    ]
+  },
+  "motion_and_micro_interactions": {
+    "framework": "framer-motion",
+    "card_hover": "hover:-translate-y-0.5 transition-transform duration-200 ease-out",
+    "list_item": "staggered entrance variants opacity 0 to 1, y 10 to 0",
+    "accessibility": "Respect prefers-reduced-motion; disable parallax/heavy transforms if active"
+  },
+  "media_assets": {
+    "founder_avatar": "https://images.unsplash.com/photo-1752738372136-2602aaafdcb7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTV8MHwxfHNlYXJjaHwyfHxmb3VuZGVyJTIwZXhlY3V0aXZlJTIwcG9ydHJhaXQlMjB0ZWNoJTIwZGFzaGJvYXJkfGVufDB8fHx8MTc5MjU2OTM4Mnww&ixlib=rb-4.1.0&q=85",
+    "icons_library": "lucide-react"
+  },
+  "testing_and_qa": {
+    "rule": "CRITICAL: Every interactive button, link, form input, tab, modal trigger, card, and metric display MUST include data-testid in kebab-case format."
+  }
+}

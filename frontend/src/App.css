@@ -1,0 +1,1 @@
+.kanban-col[data-over="true"] { outline: 2px dashed hsl(var(--brand) / 0.5); outline-offset: -4px; }
